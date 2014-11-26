@@ -1,0 +1,31 @@
+Wed Nov 26 16:02:42 EET 2014 : Сетевой сервер Apache Derby Network Server - 10.8.3.2 - (1557835) запущен и готов принимать соединения на порту 1527 на {3} 
+----------------------------------------------------------------
+Wed Nov 26 16:02:43 EET 2014:
+ Производится загрузка Derby версии The Apache Software Foundation - Apache Derby - 10.8.3.2 - (1557835): экземпляр a816c00e-0149-ec69-3ae0-00003ac10a30
+в каталоге базы данных D:\Docs_Masha\Java\Java\WebHandMade\data\hm_db  sun.misc.Launcher$AppClassLoader@10385c1 
+
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_67-b01
+user.dir=C:\Program Files\Java\jdk1.7.0_67\db
+os.name=Windows 7
+os.arch=x86
+os.version=6.1
+derby.system.home=D:\Docs_Masha\Java\Java\WebHandMade\data
+Запущен загрузчик классов базы данных - derby.database.classpath=''
+----------------------------------------------------------------
+Wed Nov 26 16:02:52 EET 2014:
+Завершается работа экземпляра a816c00e-0149-ec69-3ae0-00003ac10a30
+Wed Nov 26 16:02:52 EET 2014 Thread[DRDAConnThread_4,5,main] (DATABASE = hm_db), (DRDAID = {2}), База данных 'hm_db' завершила работу.
+----------------------------------------------------------------
+Wed Nov 26 16:04:40 EET 2014:
+ Производится загрузка Derby версии The Apache Software Foundation - Apache Derby - 10.8.3.2 - (1557835): экземпляр 6c44409f-0149-ec69-3ae0-00003ac10a30
+в каталоге базы данных D:\Docs_Masha\Java\Java\WebHandMade\data\hm_db  sun.misc.Launcher$AppClassLoader@10385c1 
+
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_67-b01
+user.dir=C:\Program Files\Java\jdk1.7.0_67\db
+os.name=Windows 7
+os.arch=x86
+os.version=6.1
+derby.system.home=D:\Docs_Masha\Java\Java\WebHandMade\data
+Запущен загрузчик классов базы данных - derby.database.classpath=''
