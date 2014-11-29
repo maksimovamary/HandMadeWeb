@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Mary
  */
-@WebServlet(name = "web_controller", urlPatterns = {"/product", "/registration"})
+@WebServlet(name = "web_controller", urlPatterns = {"/shop", "/registration"})
 public class web_controller extends HttpServlet {
 
 
@@ -25,7 +25,7 @@ public class web_controller extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         String userPath=request.getServletPath();
-        if ("/product".equals(userPath)){
+        if ("/shop".equals(userPath)){
             // TODO: обработка запроса статьи
         }else
         if ("/registration".equals(userPath)){

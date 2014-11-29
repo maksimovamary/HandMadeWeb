@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Главная страница блога</title>
+    <title>Главная</title>
 </head>
 <header>
     <a href="/"><img alt="Логотип" id="top-image" src="#"/></a>

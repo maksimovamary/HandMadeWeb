@@ -1,5 +1,5 @@
 <%-- 
-    Document   : product
+    Document   : shop
     Created on : 26.11.2014, 16:05:57
     Author     : Mary
 --%>
@@ -10,26 +10,25 @@
     <body>       
         <div id="main">
             <aside class="leftAside">
-                <h2>Темы статей</h2>
+                <h2>Лучшие товары</h2>
                 <ul>
-                    <li><a href="#">Тема 1</a></li>
-                    <li><a href="#">Тема 2</a></li>
-                    <li><a href="#">Тема 3</a></li>
-                    <li><a href="#">Тема 3</a></li>
+                    <li><a href="#">Товар 1</a></li>
+                    <li><a href="#">Товар 2</a></li>
+                    <li><a href="#">Товар 3</a></li>
+                    <li><a href="#">Товар 3</a></li>
                     
                 </ul>
             </aside>
             <section>
-                <product>
-                    <h1>Товар</h1>
-                    <div class="text-product">
+                <shop>
+                    <h1>Магазин</h1>
+                    <div class="text-shop">
                         Описание
                     </div>
-                    <div class="fotter-product">
+                    <div class="fotter-shop">
                         <span class="name">Название: <a href="#">название</a></span>
-                        <span class="price-product">Цена:</span>
                     </div>
-                </product>
+                </shop>
             </section>
         </div>        
     </body>

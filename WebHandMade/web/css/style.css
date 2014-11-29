@@ -94,34 +94,34 @@ header{
     text-decoration: none;
     padding: 3px 2px;
 }
-#main article{
+#main shop{
     margin-left: 260px;
     margin-bottom: 5px;
     background: #80abdb;
     border: 1px solid #40658d;
     border-radius: 5px;
 }
-#main article h1{
+#main shop h1{
     font-size: 2em;
     padding: 3px 5px;
     margin: 0px;
     border-radius: 5px 5px 0px 0px;
 }
-#main article .text-article{
+#main shop .text-shop{
     padding: 5px;
     font-size: 15px;
     background: #cce6fc;
 }
-#main article .text-article label{
+#main shop .text-shop label{
    margin-right: 10px;
 }
-#main article .fotter-article{
+#main shop .fotter-shop{
     height: 23px;
     background: #8babce;
     border-radius: 0px 0px 5px 5px;
     padding: 3px;
 }
-#main article .date-article, .read{
+#main shop .date-shop, .read{
     float: right;
     margin-left: 10px;
 }
