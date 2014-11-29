@@ -7,26 +7,35 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import session.ShopsFacade;
 
 /**
  *
  * @author Mary
  */
-@WebServlet(name = "web_controller", urlPatterns = {"/shop", "/registration"})
+@WebServlet(name = "web_controller", loadOnStartup=1, urlPatterns = {"/shop", "/registration"})
 public class web_controller extends HttpServlet {
+    
+    @EJB
+    ShopsFacade shopsFacade;
 
+    @Override
+    public void init() throws ServletException {
+        getServletContext().setAttribute("shops", shopsFacade.findAll());
+    }
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         String userPath=request.getServletPath();
         if ("/shop".equals(userPath)){
-            // TODO: обработка запроса статьи
+            // TODO: обработка запроса магазина
         }else
         if ("/registration".equals(userPath)){
             //TODO: обработка запроса регистрации

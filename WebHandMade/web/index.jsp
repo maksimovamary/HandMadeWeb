@@ -16,16 +16,20 @@
                 </ul>
             </aside>
             <section>
-                <shop>
-                    <h1>Магазин</h1>
-                    <div class="text-shop">
-                        Описание
-                    </div>
-                    <div class="fotter-shop">
-                        <span class="name">Название: <a href="#">название</a></span>
-                        <span class="read"><a href="javascript:void(0);">Подробнее...</a></span>
-                    </div>
-                </shop>
+                <c:forEach var="shop" items="${shops}">
+                    <shop>
+                        <h1>${shop.title}</h1>
+                        <div class="text-shop">
+                            ${fn:substring(shop.text,0,300)} ...
+                        </div>
+                        <div class="fotter-shop">
+                            <span class="read"><a href="shop?id=${shop.id}">
+
+                                    Подробнее...</a></span>
+                            <span class="date-shop">Дата: ${shop.date}</span>
+                        </div>
+                    </shop>
+                </c:forEach>
             </section>
         </div>
     </body>
