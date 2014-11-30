@@ -21,12 +21,12 @@
             </aside>
             <section>
                 <shop>
-                    <h1>Магазин</h1>
+                    <h1>${shop.title}</h1>
                     <div class="text-shop">
-                        Описание
+                        ${shop.text}
                     </div>
                     <div class="fotter-shop">
-                        <span class="name">Название: <a href="#">название</a></span>
+                        <span class="date-shop">Дата: ${shop.date}</span>
                     </div>
                 </shop>
             </section>

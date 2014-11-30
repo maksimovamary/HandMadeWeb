@@ -11,8 +11,6 @@
                     <li><a href="#">Товар 1</a></li>
                     <li><a href="#">Товар 2</a></li>
                     <li><a href="#">Товар 3</a></li>
-                    <li><a href="#">Товар 3</a></li>
-                    
                 </ul>
             </aside>
             <section>

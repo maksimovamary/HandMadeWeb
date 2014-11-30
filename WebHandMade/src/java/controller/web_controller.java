@@ -5,8 +5,10 @@
  */
 package controller;
 
+import entity.Shops;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Enumeration;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -35,13 +37,23 @@ public class web_controller extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         String userPath=request.getServletPath();
         if ("/shop".equals(userPath)){
-            // TODO: обработка запроса магазина
-        }else
-        if ("/registration".equals(userPath)){
+            String id=null;
+            Enumeration<String> params = request.getParameterNames();
+            while (params.hasMoreElements()) {
+                String param = params.nextElement();
+                id = "id".equals(param) ? request.getParameter(param) : id;
+            }
+            try {
+                Shops shop = shopsFacade.find(Integer.parseInt(id));
+                request.setAttribute("shop", shop);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else if ("/registration".equals(userPath)) {
             //TODO: обработка запроса регистрации
         }
-        
-        request.getRequestDispatcher("/WEB-INF/views"+userPath+".jsp").forward(request, response);
+
+        request.getRequestDispatcher("/WEB-INF/views" + userPath + ".jsp").forward(request, response);
     }
 
     /**

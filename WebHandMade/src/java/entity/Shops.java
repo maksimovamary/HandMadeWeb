@@ -6,6 +6,7 @@
 package entity;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Date;
 import javax.persistence.Basic;
@@ -106,8 +107,12 @@ public class Shops implements Serializable {
         this.text = text;
     }
 
-    public Date getDate() {
-        return date;
+    public String getDate() {
+        try {
+            return new SimpleDateFormat("dd.MM.yyyy").format(this.date);
+        } catch (NullPointerException e) {
+            return "Дата не определена";
+        }
     }
 
     public void setDate(Date date) {
