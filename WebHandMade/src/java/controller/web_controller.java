@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import session.ShopsFacade;
+import session.UsersManager;
 
 /**
  *
@@ -23,6 +24,9 @@ import session.ShopsFacade;
  */
 @WebServlet(name = "web_controller", loadOnStartup=1, urlPatterns = {"/shop", "/registration"})
 public class web_controller extends HttpServlet {
+    
+    @EJB
+    UsersManager userManager;
     
     @EJB
     ShopsFacade shopsFacade;
@@ -49,8 +53,26 @@ public class web_controller extends HttpServlet {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        } else if ("/registration".equals(userPath)) {
-            //TODO: обработка запроса регистрации
+        } 
+        if ("/registration".equals(userPath)) {
+            String login = null, pass = null, pass2 = null;
+            Enumeration<String> parameters = request.getParameterNames();
+            while (parameters.hasMoreElements()) {
+                String parameter = parameters.nextElement();
+                if (parameter.equals("login")) {
+                    login = request.getParameter(parameter);
+                } else if (parameter.equals("password")) {
+                    pass = request.getParameter(parameter);
+                } else if (parameter.equals("password2")) {
+                    pass2 = request.getParameter(parameter);
+                } 
+            }
+            Integer codeOperation = userManager.addUser(login, pass2, pass2);
+            if (codeOperation != 0) {
+                request.setAttribute("notif", "Код завершения операции: " + codeOperation);
+            } else {
+                request.setAttribute("notif", "Пользователь " + login + " успешно создан!");
+            }
         }
 
         request.getRequestDispatcher("/WEB-INF/views" + userPath + ".jsp").forward(request, response);

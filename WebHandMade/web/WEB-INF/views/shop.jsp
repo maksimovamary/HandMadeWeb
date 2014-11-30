@@ -19,6 +19,7 @@
                     
                 </ul>
             </aside>
+            ${param.name}
             <section>
                 <shop>
                     <h1>${shop.title}</h1>
